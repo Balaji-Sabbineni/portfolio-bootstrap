@@ -31,6 +31,7 @@
     flex-wrap: wrap;
     flex-grow: 1wi;
     height: 89vh;
+    padding-right: 20px;
 }
 
 .gradient-box {
@@ -54,6 +55,8 @@
     }
     .about-me{
         font-size: 1.2rem;
+        padding-left: 40px;
+        padding-right: 40px;
     }
 }
 
@@ -83,6 +86,9 @@
     .title, .me {
         font-size: 1.2rem;
     }
+    .title-div{
+        padding-top: 2rem;
+    }
     .about-me div p{
         font-size: 0.8rem;
         padding-left: 40px;
@@ -103,7 +109,7 @@
     margin: 0;
 }
 
-.experience-card{
+/* .experience-card{
     flex: 1 1 300px;
     max-width: 300px;
     height: 400px;
@@ -127,7 +133,6 @@
     align-items: center;
     gap: 20px;
     max-width: 100%;
-    /* padding: 20px; */
 }
 
 .experience-card .card-content{
@@ -136,7 +141,121 @@
 
 .experience-card .card-footer{
     margin-top: 20px;
+} */
+
+.parent-container{
+    background-color: black;
+    display: flex;
+    /* flex-flow: wrap; */
+    justify-content: space-around;
+    padding: 40px;
+    padding-top: 0;
+    gap: 30px;
 }
+
+@media (max-width: 768px) {
+    .parent-container {
+        flex-wrap: wrap;
+        font-size: 0.9rem;
+    }
+
+    .experience-card {
+        max-height: 60vh;
+        overflow: hidden;
+        position: relative;
+        padding: 20px !important;
+    }
+
+    .experience-card p {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        font-size: 0.8rem;
+        margin-bottom: 10px;
+    }
+
+    .experience-card .learn-more {
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: whitesmoke;
+        color: black;
+        padding: 10px 20px;
+        text-decoration: none;
+    }
+
+}
+
+
+.experience-card {
+    border: 1px solid whitesmoke;
+    border-radius: 5px;
+    padding: 40px;
+    box-shadow: 0 2px 5px rgba(245, 245, 245, 0.1);
+    background-color: black;
+    outline-color: black;
+    color: whitesmoke;
+  }
+  .card-content {
+    padding: 20px;
+  }
+  .card-footer {
+    text-align: center;
+  }
+  .btn {
+    background-color: whitesmoke;
+    color: black;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  .btn:hover {
+    background-color: #ccc;
+  }
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+  .modal-content {
+    background-color: black;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid whitesmoke;
+    max-width: 90%;
+    position: relative;
+    color: whitesmoke;
+  }
+  .close {
+    color: rgb(39, 38, 38);
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  .close:hover,
+  .close:focus {
+    color: #000000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  /* Open modal when targeted */
+  .modal:target {
+    display: block;
+  }
+
+  .modal-content a{
+    text-decoration: none;
+  }
 
 /*.card {
 
@@ -180,7 +299,7 @@
 .marquee-content {
     /* background-color: black; */
     display: flex;
-    animation: marquee 40s linear infinite;
+    animation: marquee 5s linear infinite;
 }
 
 .marquee-item {
