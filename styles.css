@@ -52,11 +52,19 @@
     .title, .me {
         font-size: 1.8rem;
     }
+    .about-me{
+        font-size: 1.2rem;
+    }
 }
 
 @media (max-width: 992px) {
     .title, .me {
         font-size: 1.6rem;
+    }
+    .about-me div p{
+        padding-left: 40px;
+        padding-right: 40px;
+        font-size: 0.8rem;
     }
 }
 
@@ -64,11 +72,21 @@
     .title, .me {
         font-size: 1.4rem;
     }
+    .about-me div p{
+        padding-left: 40px;
+        padding-right: 40px;
+        font-size: 0.8rem;
+    }
 }
 
 @media (max-width: 576px) {
     .title, .me {
         font-size: 1.2rem;
+    }
+    .about-me div p{
+        font-size: 0.8rem;
+        padding-left: 40px;
+        padding-right: 40px;
     }
 }
 
