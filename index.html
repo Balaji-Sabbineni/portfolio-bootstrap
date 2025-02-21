@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Balaji Sabbineni</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        margin: 0;
+        overflow-x: hidden;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div>
+      <nav class="navbar fixed-top navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            Balaji Sabbineni
+            <!-- <img
+            src="data:image/png;base64,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"
+            alt="Bootstrap" width="30" height="24" /> -->
+          </a>
+          <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">About Me</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#about-me">Experience</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#skills">Skils</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contact">Contact</a>
+              </li>
+            </ul>
+            <button class="btn btn-dark" id="hire">Hire Me</button>
+          </div>
+        </div>
+      </nav>
+
+      <main class="main center-content gradient-box">
+        <div class="title-div">
+          <div class="title">Hello there,</div>
+          <div class="me">I am a Software Developer.</div>
+          <!-- <hr width="230px"> -->
+        </div>
+        <section class="about-me" id="about-me">
+          <div>
+            <p>My name is <b>Balaji Sabbineni</b></p>
+            <p>
+              I am a Software Developer with Experience in developing backend
+              systems for applications in Node.js
+            </p>
+          </div>
+        </section>
+      </main>
+      <h1 class="exp-title" id="experience">Experience</h1>
+      <div class="experience-container">
+        <div class="experience-card">
+          <div class="card-content">
+            <h3>Experience 1</h3>
+            <p>Description of experience 1.</p>
+          </div>
+          <div class="card-footer">
+            <a href="#" class="btn btn-light">Learn More</a>
+          </div>
+        </div>
+        <div class="experience-card">
+          <div class="card-content">
+            <h3>Experience 2</h3>
+            <p>Description of experience 2.</p>
+          </div>
+          <div class="card-footer">
+            <a href="#" class="btn btn-light">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h1 class="skills-title">Skills</h1>
+    <section class="marquee-sec">
+      <div class="marquee-container overflow-hidden bg-dark shadow-sm">
+        <div class="marquee-content d-flex align-items-center" id="contact">
+          <div class="marquee-item px-4 py-2 text-dark rounded-pill mx-2">
+            Java
+          </div>
+          <div class="marquee-item px-4 py-2 text-dark rounded-pill mx-2">
+            Node.js
+          </div>
+          <div class="marquee-item px-4 py-2 text-dark rounded-pill mx-2">
+            Express.js
+          </div>
+          <div class="marquee-item px-4 py-2 text-dark rounded-pill mx-2">
+            MongoDB
+          </div>
+          <div class="marquee-item px-4 py-2 text-dark rounded-pill mx-2">
+            REST APIs
+          </div>
+          <div class="marquee-item px-4 py-2 text-dark rounded-pill mx-2">
+            POSTMAN
+          </div>
+          <div class="marquee-item px-4 py-2 text-dark rounded-pill mx-2">
+            AWS
+          </div>
+          <div class="marquee-item px-4 py-2 text-dark rounded-pill mx-2">
+            Docker
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="Material-contact-section section-padding section-dark">
+      <div class="container">
+        <div class="row">
+          <!-- Section Titile -->
+          <div class="col-md-12 wow animated fadeInLeft" data-wow-delay=".2s">
+            <h1 class="section-title">Contact Me</h1>
+          </div>
+        </div>
+        <div class="row">
+          <!-- Section Titile -->
+          <div
+            class="col-md-6 mt-3 contact-widget-section2 wow animated fadeInLeft"
+            data-wow-delay=".2s"
+          >
+            <!-- <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using Content.</p> -->
+
+            <div class="find-widget">
+              Name: <a href="https://hostriver.ro">Balaji Sabbineni</a>
+            </div>
+            <div class="find-widget">Address: Hyderabad</div>
+            <div class="find-widget">Phone: +91 1234567890</div>
+
+            <div class="find-widget">
+              Website: <a href="https://uny.ro">balajisabbineni.com</a>
+            </div>
+            <!-- <div class="find-widget">
+                 Program: <a href="#">Mon to Sat: 09:30 AM - 10.30 PM</a>
+              </div> -->
+          </div>
+          <!-- contact form -->
+          <div class="col-md-6 wow animated fadeInRight" data-wow-delay=".2s">
+            <form
+              class="shake"
+              role="form"
+              method="post"
+              id="contactForm"
+              name="contact-form"
+              data-toggle="validator"
+              action="https://formspree.io/f/mldgzanz"
+            >
+              <!-- Name -->
+              <div class="form-group label-floating">
+                <label class="control-label" for="name">Name</label>
+                <input
+                  class="form-control"
+                  id="name"
+                  type="text"
+                  name="name"
+                  required
+                  data-error="Please enter your name"
+                />
+                <div class="help-block with-errors"></div>
+              </div>
+              <!-- email -->
+              <div class="form-group label-floating">
+                <label class="control-label" for="email">Email</label>
+                <input
+                  class="form-control"
+                  id="email"
+                  type="email"
+                  name="email"
+                  required
+                  data-error="Please enter your Email"
+                />
+                <div class="help-block with-errors"></div>
+              </div>
+              <!-- Message -->
+              <div class="form-group label-floating">
+                <label for="message" class="control-label">Message</label>
+                <textarea
+                  class="form-control"
+                  rows="3"
+                  id="message"
+                  name="message"
+                  required
+                  data-error="Write your message"
+                ></textarea>
+                <div class="help-block with-errors"></div>
+              </div>
+              <!-- Form Submit -->
+              <div class="form-submit mt-5">
+                <button class="btn btn-light" type="submit" id="form-submit">
+                  <i class="material-icons mdi mdi-message-outline"></i> Send
+                  Message
+                </button>
+                <div id="msgSubmit" class="h3 text-center hidden"></div>
+                <div class="clearfix"></div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div>
+        <p>&copy; Balaji Sabbineni 2025. All rights reserved.</p>
+      </div>
+      <div>
+        <p><a href="#">Back to top ↑</a></p>
+      </div>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
